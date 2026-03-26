@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHULADA - Portafolio</title>
+  <style>
+    :root {
+      --negro: #000000;
+      --blanco: #ffffff;
+      --verde: #DEFF1F;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--negro);
+      color: var(--blanco);
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(180deg, #000000 50%, #ffffff 35%, #DEFF1F 15%);
+      color: #000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 3px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      filter: grayscale(20%);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+    }
+
+    /* Imagen central estilo referencia */
+    .featured {
+      grid-column: span 2;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.6);
+    }
+
+    .featured::after {
+      content: "LA CHULA";
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 2rem;
+      color: var(--verde);
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #aaa;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h3>Portafolio fotográfico</h1>
+    <p>CHULADA</p>
+  </header>
+
+  <section class="gallery">
+
+    <div class="featured">
+      <img src="1.jpg" alt="Imagen principal">
+    </div>
+
+    <img src="./1.jpg" alt="Foto 1">
+    <img src="./2.JPG" alt="Foto 2">
+    <img src="./3.jpg" alt="Foto 3">
+    <img src="./7.JPG" alt="Foto 4">
+
+  </section>
+
+  <footer>
+    <p>© 2026 Chulada</p>
+  </footer>
+
+</body>
+</html>
